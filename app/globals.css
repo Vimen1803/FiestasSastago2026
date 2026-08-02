@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0b1330;
+  color: #f7f4ec;
+}
+
+/* Mobile-first shell: on wider screens the app stays clamped to a phone-width column */
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  background-color: #111d47;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+@media (min-width: 481px) {
+  .app-shell {
+    min-height: 100vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+}
+
+/* Ticket notch: the little punched circles on either side of a ticket stub */
+.ticket-notch::before,
+.ticket-notch::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #0b1330;
+  border-radius: 999px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.ticket-notch::before { left: -9px; }
+.ticket-notch::after { right: -9px; }
+
+.perforation {
+  background-image: linear-gradient(to bottom, transparent 0, transparent 4px, rgba(247,244,236,0.25) 4px, rgba(247,244,236,0.25) 5px, transparent 5px, transparent 9px);
+  background-size: 1px 9px;
+  background-repeat: repeat-y;
+}
+
+.confetti-bg {
+  background-color: #111d47;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(243,189,58,0.14) 0, transparent 45%),
+    radial-gradient(circle at 85% 8%, rgba(240,118,106,0.16) 0, transparent 40%),
+    radial-gradient(circle at 75% 90%, rgba(50,74,149,0.4) 0, transparent 50%);
+}
+
+/* Tarjeta de cabecera (header): degradado azul marino con un leve resplandor
+   violeta/rosado detrás del escudo, como en los mockups */
+.header-card {
+  background-color: #0e1836;
+  background-image:
+    radial-gradient(circle at 82% 15%, rgba(168,110,214,0.28) 0, transparent 55%),
+    radial-gradient(circle at 95% 60%, rgba(232,120,120,0.14) 0, transparent 50%),
+    linear-gradient(120deg, #0d1638 0%, #142150 55%, #1c2a5e 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 8px 24px -12px rgba(0,0,0,0.6);
+}
+
+/* Fondo de la portada (home): foto con degradado oscuro para que el
+   contenido siga siendo legible */
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to bottom, rgba(11,19,48,0.35) 0%, rgba(11,19,48,0.55) 35%, rgba(11,19,48,0.92) 72%, #0b1330 100%),
+    url('/cover.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.cover-repeat-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to bottom, rgba(11,19,48,0.35) 0%, rgba(11,19,48,0.55) 35%, rgba(11,19,48,0.92) 72%, #0b1330 100%),
+    url('/cover.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+}
+
+/* Tarjeta de día tipo "ticket" (mockup: bloque dorado + bloque azul con icono) */
+.day-card {
+  background-color: #16234f;
+  box-shadow: 0 6px 18px -10px rgba(0,0,0,0.55);
+}
+
+.day-card-gold {
+  background: linear-gradient(160deg, #f6c948 0%, #e8a91f 100%);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #f3bd3a;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
