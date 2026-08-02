@@ -1,4 +1,4 @@
-const SITE_URL = 'https://fiestas-sastago.vercel.app';
+const SITE_URL = 'https://fiestas-sastago2026.vercel.app';
 
 export default function robots() {
   return {

@@ -7,7 +7,7 @@ import '@fontsource/work-sans/600.css';
 import Footer from '../components/Footer';
 import './globals.css';
 
-const SITE_URL = 'https://fiestas-sastago.vercel.app';
+const SITE_URL = 'https://fiestas-sastago2026.vercel.app';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
