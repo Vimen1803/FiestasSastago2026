@@ -37,11 +37,20 @@ export const metadata = {
     siteName: 'Fiestas Sástago 2026',
     locale: 'es_ES',
     type: 'website',
+    images: [
+      {
+        url: `${SITE_URL}/shareimg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Fiestas Sástago 2026',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fiestas Sástago 2026',
     description: 'Programa completo de las Fiestas de San Roque y la Virgen de Montler. 13–18 de agosto.',
+    images: [`${SITE_URL}/shareimg.jpg`],
   },
   robots: {
     index: true,
