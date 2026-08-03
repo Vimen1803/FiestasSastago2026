@@ -39,7 +39,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/shareimg.jpg`,
+        url: `${SITE_URL}/shareimg.jpg?v=3`,
         width: 1200,
         height: 630,
         alt: 'Fiestas Sástago 2026',
@@ -50,7 +50,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Fiestas Sástago 2026',
     description: 'Programa completo de las Fiestas de San Roque y la Virgen de Montler. 13–18 de agosto.',
-    images: [`${SITE_URL}/shareimg.jpg`],
+    images: [`${SITE_URL}/shareimg.jpg?v=3`],
   },
   robots: {
     index: true,
