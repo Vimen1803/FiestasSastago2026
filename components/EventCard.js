@@ -30,6 +30,30 @@ export default function EventCard({ time, title, description, place, embedSrc, l
     return time;
   };
 
+  const formatDescription = (text) => {
+    if (!text) return null;
+    const regex = /(@[a-zA-Z0-9._]+)/g;
+    const parts = text.split(regex);
+    return parts.map((part, index) => {
+      if (part.startsWith('@')) {
+        const username = part.substring(1);
+        return (
+          <a
+            key={index}
+            href={`https://www.instagram.com/${username}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="text-gold-400 font-medium hover:underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <article className="bg-navy-800 rounded-2xl border border-white/5 overflow-hidden">
       {/* Cabecera de altura fija: hora · título+ubicación · mapa. Clicable para desplegar. */}
@@ -94,7 +118,7 @@ export default function EventCard({ time, title, description, place, embedSrc, l
       >
         <div className="overflow-hidden">
           <p className="font-body text-sm text-mist-400 leading-relaxed px-3.5 pb-4 pt-1 border-t border-white/5 mt-0.5">
-            {description}
+            {formatDescription(description)}
           </p>
         </div>
       </div>
