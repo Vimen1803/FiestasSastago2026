@@ -9,7 +9,7 @@ const PLACES = {
   petanca: { label: 'Pistas de petanca', lat: 41.32221, lng: -0.345418 },
   plazaAyuntamiento: { label: 'Plaza Ramón y Cajal / Ayuntamiento', lat: 41.321422, lng: -0.354861 },
   peña35: { label: 'Peña "35 ½" (Calle del Medio)', lat: 41.321284, lng: -0.351136 },
-  plazaDiputacion: { label: 'Plaza de la Diputación (Plaza de los Arcos)', lat: 41.321689, lng: -0.352424 },
+  plazaDiputacion: { label: 'Plaza de la Diputación / de los Arcos', lat: 41.321689, lng: -0.352424 },
   ermita: { label: 'Ermita de Ntra. Sra. de Montler', lat: 41.340508, lng: -0.3275932 },
   caminoErmita: { label: 'Camino de la Ermita desde el Puente', lat: 41.319545, lng: -0.339862 },
   basculaAntigua: { label: 'Antigua báscula', lat: 41.322826, lng: -0.343642 },
