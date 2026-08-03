@@ -26,7 +26,7 @@ const PLACES = {
   institutoCalderete: { label: 'Puerta del instituto', lat: 41.3231887, lng: -0.3455881 },
   // Pendiente: el enlace de la piscina municipal no se pudo resolver todavía (link roto).
   // En cuanto llegue el correcto, rellenar lat/lng aquí y listo.
-  piscina: { label: 'Piscina Municipal', lat: 41.3259046, lng: -0.343963 },
+  piscina: { label: 'Piscina Municipal', lat: 41.3240405, lng: -0.3430078 },
 };
 
 function loc(key) {
