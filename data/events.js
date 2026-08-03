@@ -10,7 +10,8 @@ const PLACES = {
   plazaAyuntamiento: { label: 'Plaza Ramón y Cajal / Ayuntamiento', lat: 41.321422, lng: -0.354861 },
   peña35: { label: 'Peña "35 ½" (Calle del Medio)', lat: 41.321284, lng: -0.351136 },
   plazaDiputacion: { label: 'Plaza de la Diputación (Plaza de los Arcos)', lat: 41.321689, lng: -0.352424 },
-  ermita: { label: 'Ermita de la Virgen de Montler', lat: 41.319545, lng: -0.339862 },
+  ermita: { label: 'Ermita de Ntra. Sra. de Montler', lat: 41.340508, lng: -0.3275932 },
+  caminoErmita: { label: 'Camino de la Ermita desde el Puente', lat: 41.319545, lng: -0.339862 },
   basculaAntigua: { label: 'Antigua báscula', lat: 41.322826, lng: -0.343642 },
   iglesia: { label: 'Iglesia', lat: 41.3213747, lng: -0.3543105 },
   placetaFarmacia: { label: 'Placeta de la Farmacia', lat: 41.321454, lng: -0.353169 },
@@ -25,7 +26,7 @@ const PLACES = {
   institutoCalderete: { label: 'Puerta del instituto', lat: 41.3231887, lng: -0.3455881 },
   // Pendiente: el enlace de la piscina municipal no se pudo resolver todavía (link roto).
   // En cuanto llegue el correcto, rellenar lat/lng aquí y listo.
-  piscina: { label: 'Piscina Municipal', lat: null, lng: null },
+  piscina: { label: 'Piscina Municipal', lat: 41.3259046, lng: -0.343963 },
 };
 
 function loc(key) {
@@ -155,7 +156,7 @@ export const DAYS = [
         title: 'Procesión de la Virgen de Montler',
         description:
           'Acompañando a la Virgen desde el puente hasta la iglesia, junto a la Charanga "El Empujón".',
-        ...loc('iglesia'),
+        ...loc('caminoErmita'),
       },
       {
         time: '8:00',
