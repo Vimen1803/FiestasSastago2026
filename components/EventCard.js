@@ -14,6 +14,22 @@ export default function EventCard({ time, title, description, place, embedSrc, l
     }
   };
 
+  const renderTime = () => {
+    const parts = time.split(/[-–]/);
+    if (parts.length === 2) {
+      return (
+        <>
+          {parts[0].trim()}
+          <br />
+          –
+          <br />
+          {parts[1].trim()}
+        </>
+      );
+    }
+    return time;
+  };
+
   return (
     <article className="bg-navy-800 rounded-2xl border border-white/5 overflow-hidden">
       {/* Cabecera de altura fija: hora · título+ubicación · mapa. Clicable para desplegar. */}
@@ -27,8 +43,8 @@ export default function EventCard({ time, title, description, place, embedSrc, l
       >
         {/* Hora */}
         <div className="w-16 shrink-0 h-full flex flex-col items-center justify-center bg-navy-700/50 px-1 border-r border-white/5">
-          <span className="font-display text-[15px] text-gold-400 leading-tight text-center">
-            {time}
+          <span className="font-display text-[14px] text-gold-400 leading-tight text-center">
+            {renderTime()}
           </span>
         </div>
 
