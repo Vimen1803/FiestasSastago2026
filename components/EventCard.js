@@ -32,7 +32,7 @@ export default function EventCard({ time, title, description, place, embedSrc, l
 
   const formatDescription = (text) => {
     if (!text) return null;
-    const regex = /(@[a-zA-Z0-9._]+)/g;
+    const regex = /(@[a-zA-Z0-9._]*[a-zA-Z0-9_])/g;
     const parts = text.split(regex);
     return parts.map((part, index) => {
       if (part.startsWith('@')) {
