@@ -24,12 +24,23 @@ const jsonLd = {
     'Programa de las Fiestas de San Roque y la Virgen de Montler en Sástago, del 13 al 18 de agosto de 2026.',
 };
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Fiestas Sástago 2026',
+  url: 'https://fiestas-sastago2026.vercel.app',
+};
+
 export default function HomePage() {
   return (
     <div className="relative min-h-[100dvh]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <div className="cover-bg" aria-hidden="true" />
 
